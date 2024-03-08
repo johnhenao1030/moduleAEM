@@ -3,9 +3,9 @@ import React from "react";
 const Header = () => {
     return (
         <header>
-            <p>Header tesst</p>
+            <p>Headertdesst</p>
         </header>
     );
 }
 
-export default Header;
+export default Header; 
