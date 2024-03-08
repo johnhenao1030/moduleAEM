@@ -47,12 +47,13 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "testAEM1",
+      name: "testAEM2",
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
         './Header': './src/components/header.jsx',
         './Footer': './src/components/footer.jsx',
+        './Button': './src/components/button.jsx',
       },
       shared: {
         ...deps,
