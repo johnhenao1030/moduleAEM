@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <footer>
-            <p>Fooooooter</p>
+            <p>Footer microfrontend 2</p>
         </footer>
     );
 }
