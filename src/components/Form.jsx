@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/form.css';
 import image from './assets/icon-form.png';
 
-const Form = () => {
+const Form = (appData) => {
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -25,6 +25,9 @@ const Form = () => {
     console.log(formData);
     setShowPopup(true); // Mostrar el popup después de enviar el formulario
   };
+
+  const propsAem = aem;
+  console.log('appData desde la aplicacion externa:', appData);
 
   return (
     <div className="container">
