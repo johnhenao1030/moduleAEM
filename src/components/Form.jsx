@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/form.css';
 import image from './assets/icon-form.png';
 
-const Form = (appData) => {
+const Form = ({appData}) => {
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
