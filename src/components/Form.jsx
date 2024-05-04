@@ -26,7 +26,6 @@ const Form = (appData) => {
     setShowPopup(true); // Mostrar el popup después de enviar el formulario
   };
 
-  const propsAem = aem;
   console.log('appData desde la aplicacion externa:', appData);
 
   return (
