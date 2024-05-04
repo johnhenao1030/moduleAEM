@@ -24,6 +24,14 @@ module.exports = (_, argv) => ({
 
   module: {
     rules: [
+      // Otras reglas...
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        },
+      },
       {
         test: /\.m?js/,
         type: "javascript/auto",
@@ -51,9 +59,7 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        './Header': './src/components/header.jsx',
-        './Footer': './src/components/footer.jsx',
-        './Button': './src/components/button.jsx',
+        './Form': './src/components/Form.jsx',
       },
       shared: {
         ...deps,
