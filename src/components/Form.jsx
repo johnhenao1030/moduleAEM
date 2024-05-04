@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/form.css';
 import image from './assets/icon-form.png';
 
@@ -26,10 +26,13 @@ const Form = (appData) => {
     setShowPopup(true); // Mostrar el popup después de enviar el formulario
   };
 
-  console.log('appData desde la aplicacion externa:', appData);
+  useEffect(() => {
+    console.log('appData desde la aplicacion externa:', appData);
+  }, []);
+
 
   return (
-    <div className="container">
+    <div className="container-microfrontend">
       <form id="formulario" onSubmit={handleSubmit}>
         <div className='container-title-img'>
           <img className='image-form' src={image} alt="Imagen de ejemplo" />
