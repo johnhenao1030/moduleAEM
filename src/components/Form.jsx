@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/form.css';
 import image from './assets/icon-form.png';
 
-const Form = ({appData}) => {
+const Form = ({appData, setPais}) => {
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -29,6 +29,13 @@ const Form = ({appData}) => {
   useEffect(() => {
     console.log('appData desde la aplicacion externa:', appData);
   }, []);
+
+  useEffect(() => {
+    // Define el valor de Pais
+    const pais = "Colombia";
+    // Llama a la función de devolución de llamada con el valor de Pais
+    setPais(pais);
+  }, [setPais]); 
 
 
   return (
