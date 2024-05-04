@@ -5,7 +5,7 @@ const deps = require("./package.json").dependencies;
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:4001/",
+    publicPath: "https://moduleaem.netlify.app/",
   },
 
   resolve: {
