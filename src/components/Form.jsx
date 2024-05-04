@@ -3,6 +3,7 @@ import '../styles/form.css';
 import image from './assets/icon-form.png';
 
 const Form = ({appData, setPais}) => {
+
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -31,11 +32,11 @@ const Form = ({appData, setPais}) => {
   }, []);
 
   useEffect(() => {
-    // Define el valor de Pais
-    const pais = "Colombia";
-    // Llama a la función de devolución de llamada con el valor de Pais
-    setPais(pais);
-  }, [setPais]); 
+    if (typeof setPais === 'function') { // Verifica que setPais sea una función
+      const pais = "Colombia";
+      setPais(pais);
+    }
+  }, [setPais]);
 
 
   return (
