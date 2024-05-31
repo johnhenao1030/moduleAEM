@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/form.css';
-import image from '../assets/icon-form.png';
-import { useNavigate } from 'react-router-dom';
+import image from './assets/icon-form.png';
 
-const Form = () => {
+const Form = ({appData, setPais}) => {
 
   const [formData, setFormData] = useState({
     nombre: '',
@@ -12,8 +11,7 @@ const Form = () => {
     ocupacion: 'estudiante'
   });
 
-  const navigate = useNavigate();
-
+  const [showPopup, setShowPopup] = useState(false); // Estado para controlar la visualización del popup
 
   const handleChange = (e) => {
     setFormData({
@@ -26,16 +24,26 @@ const Form = () => {
     e.preventDefault();
     // Aquí puedes realizar acciones con los datos del formulario, como enviarlos a un servidor
     console.log(formData);
-    navigate('/form-two')
+    setShowPopup(true); // Mostrar el popup después de enviar el formulario
   };
 
+  useEffect(() => {
+    console.log('appData desde la aplicacion externa:', appData);
+  }, []);
+
+  useEffect(() => {
+    if (typeof setPais === 'function') { // Verifica que setPais sea una función
+      const pais = "Colombia";
+      setPais(pais);
+    }
+  }, [setPais]);
 
 
   return (
     <div className="container-microfrontend">
       <form id="formulario" onSubmit={handleSubmit}>
         <div className='container-title-img'>
-{/*           <img className='image-form' src={image} alt="Imagen de ejemplo" /> */}
+          <img className='image-form' src={image} alt="Imagen de ejemplo" />
           <h2>Completa tus datos</h2>
         </div>
         <div className="input-group">
@@ -60,6 +68,14 @@ const Form = () => {
         </div>
         <button type="submit">Enviar</button>
       </form>
+      {showPopup && (
+        <div>
+          <div className="popup-overlay"></div> {/* Capa de fondo semitransparente */}
+          <div className="popup">
+            <p>Muchas gracias, {formData.nombre}. Los datos se han enviado correctamente.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
