@@ -5,7 +5,7 @@ const deps = require("./package.json").dependencies;
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "https://moduleaem.netlify.app/"  /* "http://localhost:4001/" */,
+    publicPath: "https://moduleaem.netlify.app/",  /* "http://localhost:4001/" */
   },
 
   resolve: {
@@ -68,7 +68,7 @@ module.exports = (_, argv) => ({
         react: {
           singleton: true,
           requiredVersion: deps.react,
-          eager: true, // Asegúrate de entender las implicaciones de 'eager' en tu caso
+          eager: true,
         },
         "react-dom": {
           singleton: true,

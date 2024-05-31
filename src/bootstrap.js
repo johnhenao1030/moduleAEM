@@ -1,4 +1,4 @@
-// App.jsx
+/* // App.jsx
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import Form from "./components/Form";
@@ -26,3 +26,15 @@ const App = () => {
 };
 
 root.render(<App />);
+ */
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
+
+const render = (containerId) => {
+  const root = createRoot(document.getElementById(containerId));
+  root.render(<App />);
+};
+
+export { render };
