@@ -17,9 +17,4 @@ const App = () => (
   </BrowserRouter>
 );
 
-// Renderiza dentro del root creado con createRoot
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<App />);
