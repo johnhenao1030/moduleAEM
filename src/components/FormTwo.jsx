@@ -31,7 +31,7 @@ const Form = () => {
     <div className="container-microfrontend">
       <form id="formulario" onSubmit={handleSubmit}>
         <div className='container-title-img'>
-          <img className='image-form' src={image} alt="Imagen de ejemplo" />
+        {/*   <img className='image-form' src={image} alt="Imagen de ejemplo" /> */}
           <h2>Completa tus datos</h2>
         </div>
         <div className="input-group">
