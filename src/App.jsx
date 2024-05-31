@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import Form from "./components/Form";
 import FormTwo from "./components/FormTwo";
 
@@ -17,6 +17,25 @@ const App = () => {
         <FormTwo />
       )}
     </div>
+  );
+};
+
+export default App; */
+
+
+import React, { useState } from "react";
+import Form from "./components/Form";
+import FormTwo from "./components/FormTwo";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Form />} />
+        <Route path="/form-two" element={<FormTwo />} />
+      </Routes>
+    </Router>
   );
 };
 

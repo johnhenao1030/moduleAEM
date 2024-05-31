@@ -3,7 +3,7 @@ import '../styles/form.css';
 import image from '../assets/icon-form.png';
 import { useNavigate } from 'react-router-dom';
 
-const Form = ({onSubmit}) => {
+const Form = () => {
 
   const [formData, setFormData] = useState({
     nombre: '',
@@ -11,6 +11,8 @@ const Form = ({onSubmit}) => {
     email: '',
     ocupacion: 'estudiante'
   });
+
+  const navigate = useNavigate();
 
 
 
@@ -24,7 +26,7 @@ const Form = ({onSubmit}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    onSubmit(); // Llama a la función onSubmit pasada como prop desde App
+    navigate("/form-two")// Llama a la función onSubmit pasada como prop desde App
   };
   
 
