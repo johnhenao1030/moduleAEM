@@ -60,6 +60,7 @@ module.exports = (_, argv) => ({
       remotes: {},
       exposes: {
         './Form': './src/components/Form.jsx',
+        './FormTwo': './src/components/FormTwo.jsx',
       },
       shared: {
         ...deps,
