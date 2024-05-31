@@ -3,7 +3,7 @@ import '../styles/form.css';
 import image from '../assets/icon-form.png';
 import { useNavigate } from 'react-router-dom';
 
-const Form = ({onSubmit}) => {
+const Form = ({ onSubmit }) => {
 
   const [formData, setFormData] = useState({
     nombre: '',
@@ -23,10 +23,17 @@ const Form = ({onSubmit}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    onSubmit(); 
-  };
-  
 
+    // Emitir el evento personalizado al hacer clic en enviar
+    const event = new Event('formularioEnviado');
+    console.log(event);
+    window.dispatchEvent(event);
+
+    // Retrasa la ejecución de onSubmit() durante 5 segundos (5000 milisegundos)
+    setTimeout(() => {
+      onSubmit();
+    }, 5000);
+  };
 
 
   return (
