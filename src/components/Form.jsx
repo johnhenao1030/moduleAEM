@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/form.css';
-import image from './assets/icon-form.png';
 
 const Form = ({appData, setPais}) => {
 
@@ -43,7 +42,6 @@ const Form = ({appData, setPais}) => {
     <div className="container-microfrontend">
       <form id="formulario" onSubmit={handleSubmit}>
         <div className='container-title-img'>
-          <img className='image-form' src={image} alt="Imagen de ejemplo" />
           <h2>Completa tus datos</h2>
         </div>
         <div className="input-group">
