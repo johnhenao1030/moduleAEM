@@ -59,6 +59,7 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
+        './App': './src/bootstrap.js',
         './Form': './src/components/Form.jsx',
         './FormTwo': './src/components/FormTwo.jsx',
       },
