@@ -1,6 +1,5 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Form from "./components/Form";
 import FormTwo from "./components/FormTwo";
 import "./index.css";
@@ -9,12 +8,11 @@ import "./index.css";
 const root = createRoot(document.getElementById("app"));
 
 const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Form />} />
-      <Route path="/form-two" element={<FormTwo />} />
-    </Routes>
-  </BrowserRouter>
+  <div>
+    <Form />
+    <FormTwo />
+  </div>
+
 );
 
 // Renderiza dentro del root creado con createRoot
