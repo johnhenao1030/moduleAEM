@@ -35,24 +35,23 @@ const Form = () => {
           <h2>Completa tus datos</h2>
         </div>
         <div className="input-group">
-          <label htmlFor="nombre">Nombre:</label>
+          <label htmlFor="nombre">Nombre de la empresa:</label>
           <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={handleChange} required />
         </div>
         <div className="input-group">
-          <label htmlFor="apellido">Apellido:</label>
+          <label htmlFor="apellido">Ingresos mensuales</label>
           <input type="text" id="apellido" name="apellido" value={formData.apellido} onChange={handleChange} required />
         </div>
         <div className="input-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Referencia personal:</label>
           <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
         <div className="input-group">
-          <label htmlFor="ocupacion">Ocupación:</label>
+          <label htmlFor="ocupacion">Tipo de contrato:</label>
           <select id="ocupacion" name="ocupacion" value={formData.ocupacion} onChange={handleChange} required>
-            <option value="">Selecciona tu ocupación</option>
-            <option value="estudiante">Estudiante</option>
-            <option value="profesor">Profesor</option>
-            <option value="profesional">Profesional</option>
+            <option value="">Selecciona tu contrato</option>
+            <option value="estudiante">Termino fijo</option>
+            <option value="profesor">Termino indefinido</option>
           </select>
         </div>
         <div className="input-group">
